@@ -1,0 +1,125 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #E3F2FD;
+  color: #FFF;
+}
+
+.container {
+  width: 48.75rem;
+  border-radius: 1.25rem;
+  padding: 2.188rem 2.5rem;
+  background-color: #000;
+}
+
+.container header {
+  color: #B2B2B2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h2 {
+  font-size: 1.6rem;
+}
+
+header .col {
+  display: flex;
+  align-items: center;
+}
+
+.col span {
+  font-weight: 500;
+  margin-right: 0.938rem;
+  font-size: 1.19rem;
+}
+
+.volume-slider input {
+  accent-color: #FFF;
+}
+
+.keys-check input {
+  width: 3.75rem;
+  height: 1.875rem;
+  appearance: none;
+  border-radius: 1.875rem;
+  background-color: #4B4B4B;
+  cursor: pointer;
+  position: relative;
+}
+
+.keys-check input::before {
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #8C8C8C;
+  position: absolute;
+  top: 50%;
+  left: 0.3rem;
+  border-radius: inherit;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.keys-check input:checked::before {
+  left: 2.1rem;
+  background-color: #FFF;
+}
+
+.piano-keys {
+  display: flex;
+  margin-top: 2.5rem;
+}
+
+.piano-keys .key {
+  cursor: pointer;
+  list-style: none;
+  color: #A2A2A2;
+  user-select: none;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.key.hide span {
+  display: none;
+}
+
+.piano-keys .white {
+  width: 4.375rem;
+  height: 14.375rem;
+  margin-left: 0.063rem;
+  background: linear-gradient(#FFF 96%, #EEE 4%);
+  border-radius: 0.5rem;
+}
+
+.piano-keys .white.active {
+  box-shadow: inset -0.313rem 0.313rem 1.25rem rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom #FFF 0%, #EEE 100%);
+}
+
+.piano-keys .black {
+  width: 2.75rem;
+  height: 8.75rem;
+  z-index: 2;
+  margin: 0 -1.375rem 0 -1.375rem;
+  border-radius: 0 0 0.313rem 0.313rem;
+  background: linear-gradient(#333, #000);
+}
+
+.piano-keys .black.active {
+  box-shadow: inset -0.313rem 0.313rem 0.626rem rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to bottom #000, #434343);
+}
+
+.piano-keys span {
+  position: absolute;
+  bottom: 1.25rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.13rem;
+}
